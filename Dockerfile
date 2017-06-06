@@ -4,4 +4,5 @@ RUN apt-get update \
     && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 ENV DISPLAY :1
 COPY start.sh /
+VOLUME /tmp/.X11-unix
 ENTRYPOINT ["/start.sh"]
